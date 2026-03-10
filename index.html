@@ -31,12 +31,12 @@
     <main class="w-[80%] mx-auto">
         <div class="banner flex justify-between mb-8 text-[20px] text-[#002C5C] font-semibold">
             <h1>Available Jobs</h1>
-            <h6>8 jobs</h6>
+            <h6 id="job">0</h6>
         </div>
         <div class="mb-4">
-            <button class="bg-[#3B82F6] text-white p-3.5 rounded-[4px] w-[80px]" id="interview-btn">All</button>
-            <button class="bg-[#FFFFFF] text-[#64748B] p-3.5" id="rejected-btn">Interview</button>
-            <button class="bg-[#FFFFFF] text-[#64748B] p-3.5" id="all-btn">Rejected</button>
+            <button onclick="toggleStyle('all-btn')" class=" bg-[#3B82F6] text-white p-3.5 rounded-sm w-20 cursor-pointer" id="all-btn">All</button>
+            <button onclick="toggleStyle('interview-btn')" class="bg-[#FFFFFF] text-[#64748B] p-3.5 rounded-sm cursor-pointer" id="interview-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-btn')" class="bg-[#FFFFFF] text-[#64748B] p-3.5 rounded-sm cursor-pointer" id="rejected-btn">Rejected</button>
         </div>
 
         <section id="allCards" class="space-y-3.5">
@@ -55,12 +55,12 @@
                 <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
 
@@ -79,35 +79,37 @@
                 <p class="text-[#323B49] text-[14px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
+
           <!-- third card -->
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">DataViz Solutions</h3>
+                  <h5 class="text-[#64748B] ">Data Visualization Specialist</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">Boston, MA &bull; Full-time &bull; $125,000 - $165,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                </p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
 
@@ -115,48 +117,47 @@
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">CloudFirst Inc</h3>
+                  <h5 class="text-[#64748B] ">Backend Developer</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">Seattle, WA &bull; Full-time &bull; $140,000 - $190,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
-
 
           <!-- fifth card -->
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Innovation Labs</h3>
+                  <h5 class="text-[#64748B] ">UI/UX Engineer</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">Austin, TX &bull; Full-time &bull; $110,000 - $150,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
 
@@ -164,23 +165,23 @@
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">StartupXYZ</h3>
+                  <h5 class="text-[#64748B] ">Full Stack Engineer</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $120,000 - $160,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
 
@@ -188,49 +189,51 @@
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">MegaCorp Solutions</h3>
+                  <h5 class="text-[#64748B] ">JavaScript Developer</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">New York, NY &bull; Full-time &bull; $130,000 - $170,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
+
           <!-- eighth card -->
           <div class="p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl mb-3.5">
             <div class="space-y-4">
                <div>
-                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">Mobile First Corp</h3>
-                  <h5 class="text-[#64748B] ">React Native Developer</h5>
+                 <h3 class="font-semibold text-[18px] leading-6 text-[#002C5C]">TechCorp Industries</h3>
+                  <h5 class="text-[#64748B] ">Senior Frontend Developer</h5>
                </div>
                 <div>
-                    <p class="text-[#64748B]">Remote &bull; Full-time &bull; $130,000 - $175,000</p>
+                    <p class="text-[#64748B]">San Francisco, CA &bull; Full-time &bull; $130,000 - $175,000</p>
                 </div>
                 <div>
                 <button class="bg-[#EEF4FF] px-3 py-2 uppercase mb-2 font-medium text-[14px] leading-5">not applied</button>
-                <p class="text-[#323B49] text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="text-[#323B49] text-[14px]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
                 <div class="flex gap-2">
-                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Interview</button>  
-                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-[4px]">Rejected</button>
+                    <button class="border-green-500 border-2 text-green-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Interview</button>  
+                    <button class="border-red-500 border-2 text-red-500 px-3 py-2 font-semibold text-[14px] rounded-sm">Rejected</button>
                 </div>
             </div>
             <div>
-                <button>Delete</button>
+                <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
