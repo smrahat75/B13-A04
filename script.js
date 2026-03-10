@@ -1,18 +1,17 @@
-let total = document.getElementById('total');
-let interview = document.getElementById('interview');
-let rejected = document.getElementById('rejected');
-let allCards = document.getElementById('allCards');
+let currentTab = "all";
+function switchTab(tab){
+    console.log(tab);
+    const tabs = ["all", "interview", "rejected"];
 
-
-function calculateCount(){
-    total.innerText = allCards.children.length;
-    interview.innerText = interview.length;
-    rejected.innerText = rejected.length;
-    job.innerText = allCards.children.length;
+    for (const t of tabs){
+        const tabName = document.getElementById ("btn-"+t);
+        if (t === tab){
+            tabName.classList.remove("bg-[#FFFFFF]", "text-[#64748B]")
+            tabName.classList.add("bg-[#3B82F6]", "text-[#FFFFFF]")
+        }
+        else{
+            tabName.classList.add("bg-[#FFFFFF]", "text-[#64748B]")
+            tabName.classList.remove("bg-[#3B82F6]", "text-[#FFFFFF]")
+        }
+    }
 }
-calculateCount()
-
-function toggleStyle(id){
-    console.log("click")
-}
-
