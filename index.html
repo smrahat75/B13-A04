@@ -39,7 +39,7 @@
             <button  onclick="switchTab('rejected')" class="bg-[#FFFFFF] text-[#64748B] p-3.5 rounded-sm cursor-pointer" id="btn-rejected">Rejected</button>
         </div>
 
-        <section id="allCards" class="space-y-3.5">
+        <section id="allCards" class="hidden space-y-3.5">
             <!-- first card -->
           <div class=" p-6 bg-[#FFFFFF] shadow-2xl flex justify-between rounded-2xl">
             <div class="space-y-4">
@@ -232,6 +232,15 @@
                 <button class="bg-red-500 text-[#FFFFFF] px-2 py-1 rounded-[5px]">Delete</button>
             </div>
           </div>
+        </section>
+        <section class="hidden" id="interviewCards">Interview Section</section>
+        <section class="hidden" id="rejectedCards">Rejected Section</section>
+        <section>
+            <div class="hidden flex-col items-center justify-center py -20 gap-4 text-center">
+                <div class="flex items-center justify-center "><img src="images/jobs.png" alt=""></div>
+                <p class="font-syne text-lg font-bold text-navy">No jobs available</p>
+                <p class="text-sm text-slate-400">Check back soon for new job opportunities</p>
+            </div>
         </section>
     </main>
     <script src="script.js"></script>
