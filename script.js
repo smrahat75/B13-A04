@@ -27,7 +27,6 @@ function switchTab(tab){
 
     for (const section of card) {
         section.classList.add("hidden")
-        
     }
 
     if (tab === "all"){
@@ -41,4 +40,31 @@ function switchTab(tab){
     }
 
 }
+
+
+const total = document.getElementById("total");
+const interview = document.getElementById("interview");
+const rejected = document.getElementById("rejected");
+
+total.innerText = allCards.children.length;
+
+
 switchTab(currentTab)
+
+document.getElementById("card").addEventListener("click", function(event){
+    const clickedElement = event.target;
+   
+    const card = clickedElement.closest("#card");
+    const status = card.querySelector("status")
+    console.log(card)
+
+    if(clickedElement.classList.contains("interview")){
+     interviewCards.appendChild(card)
+    }
+    if(clickedElement.classList.contains("rejected")){
+      rejectedCards.appendChild(card)
+    }
+    if(clickedElement.classList.contains("delete")){
+      console.log("delete Clicked")
+    }
+})
